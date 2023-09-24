@@ -17,6 +17,28 @@ void swap(int *a, int *b)
 	*b = temp;
 }
 /**
+ * print_array - Prints an array of integers
+ *
+ * @array: The array to be printed
+ * @size: Number of elements in @array
+ */
+
+void myprint(const int *array, size_t size)
+{
+        size_t i;
+
+        i = 0;
+
+        while (array && i < size)
+        {
+                if (i > 0)
+                        printf(", ");
+                printf("%d", array[i]);
+                ++i;
+        }
+        printf("\n");
+}
+/**
  * bubble_sort - sorts an array of integers in ascending order
  * using the Bubble sort algorithm
  * @array: contain numbers to be swapped
@@ -46,3 +68,4 @@ void bubble_sort(int *array, size_t size)
 			break;
 	}
 }
+
