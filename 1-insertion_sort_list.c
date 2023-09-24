@@ -6,8 +6,8 @@
  * @list: Double linked list
  * Return - sorted list after every sort
  */
-
-void insertion_sort_list(listint_t **list){
+void insertion_sort_list(listint_t **list)
+{
 	listint_t *temp, *prev_prev, *current, *current_next;
 
 	if (list == NULL)
@@ -15,13 +15,14 @@ void insertion_sort_list(listint_t **list){
 
 	temp = *list;
 
-	while (temp){
-		if (temp->prev && temp->prev->n > temp->n){
+	while (temp)
+	{
+		if (temp->prev && temp->prev->n > temp->n)
+		{
 			/* Store the necessary pointers for swapping */
 			prev_prev = temp->prev->prev;
 			current = temp->prev;
 			current_next = temp;
-			
 			/* Adjust the pointers to swap the nodes */
 			current->next = current_next->next;
 
