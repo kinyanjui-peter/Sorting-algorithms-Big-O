@@ -15,7 +15,7 @@ void swapp(int *first, int *second)
 }
 
 /**
- * lomuto_partition - partition through an array of integers
+ * lomuto_part - partition through an array of integers
  * @array: array of integers
  * @size: the size of the array
  * @first_index: first index of array
@@ -24,7 +24,7 @@ void swapp(int *first, int *second)
  * Description: all values must be accurate
  * Return: new index position
  */
-int lomuto_partition(int *array, size_t size, int first_index, int second_index)
+int lomuto_part(int *array, size_t size, int first_index, int second_index)
 {
 	int pivot = array[second_index], i = first_index, j;
 
@@ -62,7 +62,7 @@ void lomuto_sort(int *array, size_t size, int first_index, int second_index)
 
 	if (first_index < second_index)
 	{
-		i = lomuto_partition(array, size, first_index, second_index);
+		i = lomuto_part(array, size, first_index, second_index);
 		lomuto_sort(array, size, first_index, i - 1);
 		lomuto_sort(array, size, i + 1, second_index);
 	}
