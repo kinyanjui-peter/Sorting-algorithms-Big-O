@@ -29,9 +29,14 @@ void bubble_sort(int *array, size_t size);
 void myprint(const int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
+void swap(int *a, int *b);
 void swapp(int *first, int *second);
-int lomuto_partition(int *array, size_t size, int first_index, int second_index);
+int lomuto_part(int *array, size_t size, int first_index, int second_index);
 void lomuto_sort(int *array, size_t size, int first_index, int second_index);
 void quick_sort(int *array, size_t size);
+void shell_sort(int *array, size_t size);
+void swap_next(listint_t **list, listint_t **end, listint_t **ptr_to_swapp);
+void swap_prev(listint_t **list, listint_t **end, listint_t **ptr_to_swapp);
+void cocktail_sort_list(listint_t **list);
 #endif /*end of the sort header file*/
 
