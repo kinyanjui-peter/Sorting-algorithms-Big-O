@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "sort.h"
 
 void first_half_array(int *first_half, int *buffer, size_t start, size_t center,
