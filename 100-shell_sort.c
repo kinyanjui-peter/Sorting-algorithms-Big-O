@@ -15,6 +15,26 @@ void swap_ints(int *first, int *second)
 	*first = *second;
 	*second = temp;
 }
+/**
+ * print_array - Prints an array of integers
+ * @array: The array to be printed
+ * @size: Number of elements in @array
+ */
+
+void myprint(const int *array, size_t size)
+{
+        size_t i;
+
+        i = 0;
+        while (array && i < size)
+        {
+                if (i > 0)
+                        printf(", ");
+                printf("%d", array[i]);
+                ++i;
+        }
+        printf("\n");
+}
 
 /**
  * shell_sort - Sort an array of integers in ascending
